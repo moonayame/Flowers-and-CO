@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+h2 {
+    display: inline;
+    position: relative;
+    font: 100px Lato, sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: rgba(17, 168, 171, 0.6);
+    padding-left: 5vh;
+}
+
+h2:after {
+    content: "Witaj";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: rgba(230, 76, 101, 0.4);
+    padding-left: 5vh;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 5vh;
+    color: dimgray;
+    text-align: justify;
+    line-height: 160%;
+}
+
+#parallax {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 20vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parallax-overlay {
+    height: 60vh;
+    width: 60vw;
+    margin: auto;
+    background-color: white;
+    opacity: .8;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.parallax-one {
+    background-color: #123132;
+}
+
+.parallax-two {
+    background-color: #b17b6a;
+}
+
+.parallax-three {
+    background-color: #123132;
+}
+
+.parallax-four {
+    background-color: #b17b6a;
+}
+
+a {
+    width: 25%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: 0 auto;
+    min-height: 60vh;
+}
+
+.btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.2s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 100px;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.btn-1 {
+    background-image: linear-gradient(to right, #3e0c1d 0%, #2d0f5d 51%, #3e0c1d 100%);
+}
+
+.btn-2 {
+    background-image: linear-gradient(to right, #523188 0%, #6691d8 51%, #523188 100%);
+}
+
+.btn-3 {
+    background-image: linear-gradient(to right, #ec145c 0%, #7c31f3 51%, #ec145c 100%);
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+}
+
+#slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+}
+
+#slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+}
+
+a.control_prev,
+a.control_next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #2a2a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+    border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+.half {
+    width: 50%;
+    padding: 0 1em;
+    position: relative;
+    margin: 0 auto;
+}
+
+.tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab label {
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    background: #123132;
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+}
+
+.tab-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #2b494a;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+.tab-content p {
+    margin: 1em;
+    margin-bottom: 0;
+    color: white;
+}
+
+.tab input:checked ~ .tab-content {
+    max-height: 100vh;
+}
+
+.tab label::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+.tab input[type=checkbox] + label::after {
+    content: "+";
+}
+
+.tab input[type=radio] + label::after {
+    content: "\25BC";
+}
+
+.tab input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+}
+
+.tab input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
+}
